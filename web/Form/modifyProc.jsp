@@ -7,6 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    request.setCharacterEncoding("UTF-8");
+%>
+<%
     StudentDAO dao = StudentDAO.getInstance();
 
 %>
@@ -17,7 +20,6 @@
     String loginID = (String)session.getAttribute("loginID");
     vo.setId(loginID);
     dao.updateMember(vo);
-    System.out.println("123123");
 %>
 <html>
 <head>
